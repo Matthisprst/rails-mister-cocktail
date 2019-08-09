@@ -1,0 +1,21 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://static.cuisineaz.com/680x357/i130849-.jpeg);">
+  <div class="container">
+    <h1><strong>Bellevue Cocktails vous regalent</strong></h1>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |c| %>
+    <div class="col-4">
+        <div class="card">
+          <p>
+            <%= c.id %>
+            <%= link_to c.name, cocktail_path(c) %>
+          </p>
+        </div>
+      </div>
+    <% end %>
+  <p><%= link_to '🍹New Cocktail 🍹', new_cocktail_path %></p>
+</div>

@@ -1,0 +1,11 @@
+<h1>Doses#new</h1>
+<p>Find me in app/views/doses/new.html.erb</p>
+
+<div class="container">
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description %>
+    <%= f.association :ingredient %>
+    <%= f.submit 'Add to cocktail' %>
+  <% end %>
+  <%= link_to 'Back', cocktails_path %>
+</div>
